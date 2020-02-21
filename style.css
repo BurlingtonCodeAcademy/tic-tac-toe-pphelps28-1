@@ -1,13 +1,18 @@
 body {
-  background-color: rgb(63, 61, 61);
+  background-color: rgb(36, 35, 35);
+  color: rgb(214, 220, 233);
   margin: 0px;
   text-align: center;
   user-select: none;
-  padding: 0px
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #counter {
   font-size: 40px;
+  margin: 0px
 }
 
 #turn-prompt {
@@ -18,61 +23,38 @@ h2 {
   font-size: 5vh;
   text-align: center;
   height: 75px;
-  color: rgb(219, 196, 196);
+  color: rgb(214, 220, 233);
 }
 
 span {
   font-size: 75px;
 }
 
-div[id^="row-"] div {
-  width: 200px;
-  height: 200px;
-  border: 2px solid rgb(241, 124, 124);
-  float: left;
+.square {
+  min-width: 12vh;
+  min-height: 12vh;
+  border: solid;
+  border-color: rgb(214, 220, 233);;
 }
 
-div[id^="row-"] div:last-child {
-  border-right: none;
-}
-
-div[id^="row-"] div:first-child {
-  border-left: none;
-}
-
-div[id="row-1"] div {
-  border-top: none;
-}
-
-div[id="row-3"] div {
-  border-bottom: none;
-}
-
-div[id^="row-"] {
-  clear: float;
-  width: 608px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-div.board {
-  width: 608px;
-  overflow: hidden;
-  margin: 0 auto;
+.board {
+  min-width: 10vw;
+  min-height: 10vw;
   font-size: 10vh;
   text-align: center;
-  vertical-align: middle;
+  display: flex;
+  align-self: center;
 }
 
 .status {
   font-size: xx-large;
-  color: rgb(235, 235, 197);
+  color: rgb(214, 220, 233);;
 }
 
 #start {
   font-size: xx-large;
   border-radius: 20%;
-  background-color: cornflowerblue;
+  background-color: rgb(214, 220, 233);;
 }
 
 .radio {

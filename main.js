@@ -134,10 +134,10 @@ startButton.addEventListener('click', () => {
     //start button hides radio slector
     if (radioAI.checked === true) {
         gameAI = true
-    } else gameAI = false
-    //asks for player names
-    let name1 = prompt("What's your name, player 1?")
-    let name2 = prompt("What's your name, player 2?")
+    } else gameAI = false 
+    //asks for player names (commented out for cypress testing)
+    let name1 = ''//prompt("What's your name, player 1?")
+    let name2 = ''//prompt("What's your name, player 2?")
     //hides radio selectors
     Array.from(radios).forEach(e => {
         e.hidden = true
@@ -153,24 +153,24 @@ startButton.addEventListener('click', () => {
     //start counter//
     startCounter()
     //adds event listener with markSquare function to each square
-    banner.textContent = `${currentPlayer.name}'s Turn`
+    banner.textContent = `  ${currentPlayer.name}'s turn`
     squareArr.forEach(element => {
         element.addEventListener('click', markSquare)
         event.stopPropagation()
     })
 }
 )
-////////////////////////////////////////////////////////////////////game logic/////////////////////
+//////////////////////////////game logic/////////////////////////
 function markSquare(event) {
     if (event.target.clicked === true) {
         banner.textContent = 'Please select an empty cell'
         setTimeout(() => {
-            banner.textContent = `${currentPlayer.name}'s Turn`
+            banner.textContent = `${currentPlayer.name}'s turn`
         }, 1000)
     }
     else if (gameAI === false) {
         event.target.textContent = currentPlayer.symbol
-        banner.textContent = `${currentPlayer.name}'s Turn`
+        banner.textContent = `${currentPlayer.name}'s turn`
         currentPlayer.moves.push(+event.target.id)
         event.target.clicked = true
         ///////checks if win, and if not win, checks if draw
@@ -187,11 +187,12 @@ function markSquare(event) {
             return setTimeout(clearBoard, 2000)
         }
         changePlayer()
+        banner.textContent = `${currentPlayer.name}'s turn!`
     }
     else if (gameAI === true) {
         if (currentPlayer === player1) {
             event.target.textContent = currentPlayer.symbol
-            banner.textContent = `${currentPlayer.name}'s Turn`
+            banner.textContent = `${currentPlayer.name}'s turn`
             player1.moves.push(+event.target.id)
             event.target.clicked = true
             changePlayer()
@@ -231,6 +232,8 @@ function markSquare(event) {
                 return setTimeout(clearBoard, 2000)
             }
             changePlayer()
+            banner.textContent = `${currentPlayer.name}'s turn!`
+
         }
     }
 }
