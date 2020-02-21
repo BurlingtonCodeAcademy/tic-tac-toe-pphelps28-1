@@ -11,7 +11,10 @@
 
 <body>
   <h2>Tic Tac Toe</h2>
-  <h3 id="turn-prompt"></h3>
+  <h4 id="counter">
+    <span id="min"></span>.<span id="sec"></span>
+  </h4>
+  <h3 id="turn-prompt">Press Start Game</h3>
   <div class="board">
     <div id="row-1">
       <div id="0"></div>
@@ -31,6 +34,13 @@
   </div>
 
   <div class="status">
+    <br>
+    <input type="radio" class="radio" id="PvP" name="format" value="choice" checked>
+    <label for="choice" class="radio"> Player Vs Player</label>
+    <input type="radio" class="radio" id="PvAI" name="format" value="choice">
+    <label for="choice" class="radio">Player Vs AI</label>
+    <br>
+    <br>
     <button id="start" type="button">Start Game</button>
   </div>
   <script src="main.js"></script>
