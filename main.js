@@ -101,7 +101,7 @@ function startCounter() {
                 seconds.textContent = '00'
             }
         }
-    }, 1000)
+    }, 100)
 
 }
 //ends counter
@@ -115,7 +115,7 @@ function clearBoard() {
     currentPlayer = player1
     player1.moves = []
     player2.moves = []
-    banner.textContent = ''
+    banner.textContent = 'Press Start Game'
     squareArr.forEach(e => {
         e.removeEventListener('click', markSquare)
         e.clicked = false
@@ -129,20 +129,20 @@ function clearBoard() {
     })
 }
 
-//////////////////////////////////////////////setup (event listeners)////////////////////////////
+//////////////////////////////////////////////Setup (event listeners)////////////////////////////
 startButton.addEventListener('click', () => {
     //start button hides radio slector
     if (radioAI.checked === true) {
         gameAI = true
-    } else gameAI = false 
-    //asks for player names (commented out for cypress testing)
-    let name1 = ''//prompt("What's your name, player 1?")
-    let name2 = ''//prompt("What's your name, player 2?")
+    } else gameAI = false
+    //defines default names
+    let name1 = document.getElementById("player1Name").value || ''
+    let name2 = document.getElementById("player2Name").value || ''
     //hides radio selectors
     Array.from(radios).forEach(e => {
         e.hidden = true
     })
-    //asigns default names if null or empty
+    //assigns default names if null or empty
     if (name1 == '' || name1 == null) {
         player1.name = 'X'
     } else { player1.name = name1 }

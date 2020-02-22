@@ -12,7 +12,7 @@
 <body>
   <h2>Tic Tac Toe</h2>
   <h4 id="counter">
-    <span id="min"></span>.<span id="sec"></span>
+    <span id="min"></span>:<span id="sec"></span>
   </h4>
   <h3 id="turn-prompt">Press Start Game</h3>
   <div class="board">
@@ -34,6 +34,9 @@
   </div>
 
   <div class="status">
+    <input type="text" name="Player1" class="radio nameInput" id="player1Name" placeholder="Player1">
+    <br>
+    <input type="text" name="Player1" class="radio nameInput" id="player2Name" placeholder="Player2">
     <br>
     <input type="radio" class="radio" id="PvP" name="format" value="choice" checked>
     <label for="choice" class="radio"> Player Vs Player</label>
