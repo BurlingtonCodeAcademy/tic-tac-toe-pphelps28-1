@@ -101,7 +101,7 @@ function startCounter() {
                 seconds.textContent = '00'
             }
         }
-    }, 100)
+    }, 1000)
 
 }
 //ends counter
@@ -189,6 +189,7 @@ function markSquare(event) {
         changePlayer()
         banner.textContent = `${currentPlayer.name}'s turn!`
     }
+    //Creates AI flow, changes player from user and runs AI, then changes back to player
     else if (gameAI === true) {
         if (currentPlayer === player1) {
             event.target.textContent = currentPlayer.symbol
