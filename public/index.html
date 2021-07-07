@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tic Tac Toe</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h2>Tic Tac Toe</h2>
+  <h4 id="counter">
+    <span id="min"></span>:<span id="sec"></span>
+  </h4>
+  <h3 id="turn-prompt">Press Start Game</h3>
+  <div class="board">
+    <div class="row">
+      <div id="0" class="square"></div>
+      <div id="3" class="square"></div>
+      <div id="6" class="square"></div>
+    </div>
+    <div class="row">
+      <div id="1" class="square"></div>
+      <div id="4" class="square"></div>
+      <div id="7" class="square"></div>
+    </div>
+    <div class="row">
+      <div id="2" class="square"></div>
+      <div id="5" class="square"></div>
+      <div id="8" class="square"></div>
+    </div>
+  </div>
+
+  <div class="status">
+    <input type="text" name="Player1" class="radio nameInput" id="player1Name" placeholder="Player1">
+    <br>
+    <input type="text" name="Player1" class="radio nameInput" id="player2Name" placeholder="Player2">
+    <br>
+    <input type="radio" class="radio" id="PvP" name="format" value="choice" checked>
+    <label for="choice" class="radio"> Player Vs Player</label>
+    <input type="radio" class="radio" id="PvAI" name="format" value="choice">
+    <label for="choice" class="radio">Player Vs AI</label>
+    <br>
+    <br>
+    <button id="start" type="button">Start Game</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

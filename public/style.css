@@ -1,0 +1,73 @@
+body {
+  background-color: rgb(26, 18, 18);
+  color: rgba(183, 199, 233, 0.699);
+  margin: 0px;
+  text-align: center;
+  user-select: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#counter {
+  font-size: 8vh;
+  margin: 0px
+}
+
+#turn-prompt {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 5vh;
+  text-align: center;
+  height: 75px;
+  color: rgb(114, 141, 199);
+}
+
+span {
+  font-size: 75px;
+}
+
+.square {
+  min-width: 12vh;
+  min-height: 12vh;
+  color: black;
+  border: solid;
+  border-color: rgb(146, 157, 182);
+  background-color: rgba(166, 133, 197, 0.226);
+}
+
+.board {
+  min-width: 10vw;
+  min-height: 10vw;
+  font-size: 10vh;
+  text-align: center;
+  display: flex;
+  align-self: center;
+}
+
+.status {
+  font-size: xx-large;
+  ;
+}
+
+#start {
+  font-size: xx-large;
+  border-radius: 20%;
+  background-color: rgb(214, 220, 233);
+  ;
+}
+
+.radio {
+  transform: scale(2.3);
+  padding: 10px;
+}
+
+.nameInput {
+  transform: scale(1);
+  color: White;
+  background-color: rgba(0, 0, 255, 0.534);
+  text-align: center;
+}
